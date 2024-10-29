@@ -1,17 +1,17 @@
-#include <stdio.h>
+#include <iostream>
 #include <math.h>
 
 int main() {
     int a, b, c;
-    int max = 20;
+    for(a=1;a<17;a++) {
+        for(b=a;b<17;b++) {
+            c=sqrt(a*a+b*b);
 
-    printf("Triples pitagóricos:\n");
-    for (a = 1; a <= max; a++) {
-        for (b = a; b <= max; b++) {
-            c = sqrt(a * a + b * b);
-            if (c * c == a * a + b * b) {
-                printf("%d - %d - %d\n", a, b, c);
-            }
+                if(a*a+b*b==c*c) {
+                    std::cout<<"-"<<a<<"-"<<b<<"-"<<c<<std::endl;
+
+                }
+
         }
     }
 
